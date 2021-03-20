@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8">
+<title>詳細</title>
+<link rel="stylesheet" type="text/css" href="css/style.css">
+</head>
+<body>
+<div id="wrapper">
+<header>
+<div class="title">
+<img src="images/logo.jpg" alt="logo">
+<h1>特定非営利活動法人インターネットスキル認定普及協会</h1>	
+<form id="sitesearch" action="" method="get">
+<input type="text" name="keyword" placeholder="サイト検索">
+<input type="submit" value="送信">
+</form>
+</div>
+<nav>
+<ul>
+<li class="current"><a href="index.html">ホーム</a></li>
+<li><a href="#">新着情報</a></li>
+<li><a href="about.html">協会概要</a></li>
+<li class="long"><a href="seminar.html">セミナー一覧</a></li>
+<li><a href="#">サイトマップ</a></li>
+</ul>	
+</nav>
+</header>
+<main>
+<img src="images/eyecatch2.jpg" width="960px" height="100px" alt="anime">
+<div class="detail">
+<h2>セミナー詳細</h2>
+    <h2>HTML5入門</h2>
+    <img src="images/jun.jpg" width="100" height="90">
+    <dl>
+      <dt>開催年月日</dt><dd>2019-02-25</dd>
+      <dt>開催時刻</dt><dd>10:00:00</dd>
+      <dt>コース詳細</dt><dd>HTML5の基本を短時間で学べます。</dd>
+      <dt>講師名</dt><dd>星野じゅん</dd>
+      <dt>コメント</dt><dd>楽しくWebの新技術を学びましょう。</dd>
+<h3>登録</h3>
+<button id="showentry">登録</button>
+<form id="entryform" action="" method="post">
+<input type="hidden" name="id" value="<?php p($_GET['id']); ?>">
+<input type="text"　name="name" required placeholder="お名前">	
+<input type="email" name="mail" required placeholder="メール">
+
+<input type="submit" value="送信">
+	
+
+</form>
+</main>
+<footer>
+<a href="about.html#info">協会概要</a> | <a href="about.html#privacy">プライバシーポリシー</a>
+<p><small>Copywrite 2021 ANSCP All rights reserved.</small></p>
+</footer>	
+</div>
+</body>
+</html>
+<script>
+document.getElementById('entryform').style.display='none';
+document.addEventListener('click',function(){
+document.getElementById('showentry').style.display='none';
+document.getElementById('entryform').style.display='block';
+});
+</script>
